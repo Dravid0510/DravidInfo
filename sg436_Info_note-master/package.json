@@ -1,0 +1,47 @@
+{
+  "name": "stet",
+  "version": "0.3.0",
+  "description": "Main server of STET",
+  "main": "server.ts",
+  "scripts": {
+    "start": "ts-node server.ts",
+    "start-server": "nodemon --ignore app/",
+    "start-app": "npm start --prefix app",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm i --prefix app && npm run build --prefix app"
+  },
+  "author": "",
+  "license": "MIT",
+  "nodemonConfig": {
+    "ignore": [
+      "app/",
+      "app/*",
+      "app/**/*"
+    ]
+  },
+  "engines": {
+    "node": "12.18.2",
+    "npm": "6.14.5",
+    "ts-node": "8.10.2"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcrypt": "^5.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.19",
+    "nodemailer": "^6.4.10",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.6",
+    "@types/bcrypt": "^3.0.0",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.6",
+    "@types/hapi__joi": "^17.1.2",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/mongoose": "^5.7.27",
+    "@types/nodemailer": "^6.4.0",
+    "dotenv": "^8.2.0",
+    "js-logger": "^1.6.0"
+  },
+  "devDependencies": {}
+}
